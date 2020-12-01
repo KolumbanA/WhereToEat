@@ -15,7 +15,7 @@ import com.example.wheretoeat.adapter.MyAdapter
 import com.example.wheretoeat.repository.Repository
 
 
-class Restaurant_list_fragment : Fragment() {
+class RestaurantListFragment : Fragment() {
 
     private lateinit var viewModel: MainViewModel
     private val myAdapter by lazy { MyAdapter() }
