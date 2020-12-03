@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="TextView"
+            android:text="Restaurant name"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_restaurant_image"
@@ -51,20 +51,22 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_name">
 
             <TextView
-                android:id="@+id/tv_restaurant_city"
+                android:id="@+id/tv_restaurant_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:textColor="@color/black"
-                android:text="TextView" />
+                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                android:text="Temp adress" />
 
             <TextView
-                android:id="@+id/tv_restaurant_phone"
+                android:id="@+id/tv_restaurant_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_marginStart="10dp"
-                android:text="TextView" />
+                android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+                android:text="temp price" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

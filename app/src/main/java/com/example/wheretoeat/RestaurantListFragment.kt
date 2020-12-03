@@ -43,7 +43,7 @@ class RestaurantListFragment : Fragment() {
         viewModel.myResponse.observe(this, Observer{ response ->
             if(response.isSuccessful){
                 response.body()?.let { myAdapter.setData( it.restaurants ) }
-                Log.d("rest", response.body()?.restaurants!!.size.toString())
+                //Log.d("rest", response.body()?.restaurants!!.size.toString())
             }
             else{
                 Toast.makeText(context, response.code().toString(), Toast.LENGTH_SHORT).show()
