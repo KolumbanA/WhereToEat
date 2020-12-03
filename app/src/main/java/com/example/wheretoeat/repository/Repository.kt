@@ -9,4 +9,8 @@ class Repository {
     suspend fun getPost(): Response<ApiResponse> {
         return RetrofitInstance.api.getPost()
     }
+
+    suspend fun getRestaurantsDetailed(options: Map<String, String>):Response<ApiResponse>{
+        return RetrofitInstance.api.getRestaurantsDetailed(options)
+    }
 }
