@@ -7,9 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.TransformationUtils.centerCrop
 import com.example.wheretoeat.R
-import com.example.wheretoeat.RestaurantListFragment
 import com.example.wheretoeat.model.Restaurant
 
 class MyAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>(){

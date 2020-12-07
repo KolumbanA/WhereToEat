@@ -1,4 +1,4 @@
-package com.example.wheretoeat
+package com.example.wheretoeat.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.wheretoeat.MainViewModel
+import com.example.wheretoeat.MainViewModelFactory
+import com.example.wheretoeat.R
 import com.example.wheretoeat.adapter.MyAdapter
 import com.example.wheretoeat.repository.Repository
 
@@ -42,6 +44,8 @@ class RestaurantListFragment : Fragment() {
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
 
 
+
+
         //kereses get request
 
         val options: MutableMap<String,String> = mutableMapOf()
@@ -51,7 +55,7 @@ class RestaurantListFragment : Fragment() {
             options["city"] = view.findViewById<EditText>(R.id.et_city_search).text.toString()
 
             viewModel.getRestaurantsDetailed(options)
-            viewModel.myResponseRestaurantsDetailed.observe(this, Observer{ response ->
+            viewModel.myResponseRestaurantsDetailed.observe(viewLifecycleOwner, Observer{ response ->
                 if(response.isSuccessful){
                     response.body()?.let { myAdapter.setData( it.restaurants ) }
                     //Log.d("rest", response.body()?.restaurants!!.size.toString())
