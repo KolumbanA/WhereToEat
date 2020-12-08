@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -25,6 +26,18 @@ class ProfileScreenFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.profile_screen, container, false)
 
+        //edit gomb listener
+        val profileEditFragment =  ProfileEditFragment()
+
+        view.findViewById<FloatingActionButton>(R.id.button_edit_profile).setOnClickListener {
+            getFragmentManager()?.beginTransaction()?.apply {
+                replace(R.id.fl_fragment, profileEditFragment)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
+        //--------
 
 
         //user szerkesztes

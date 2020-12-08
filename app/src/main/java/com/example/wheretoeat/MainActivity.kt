@@ -50,19 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        //edit gomb a profil fragmensben
-        /*
 
-        findViewById<Button>(R.id.button_edit_profile).setOnClickListener{
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fl_fragment, profileEditFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
-
-        */
-        //-------------
 
 
     }
