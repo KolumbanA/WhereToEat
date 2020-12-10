@@ -9,6 +9,7 @@ import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import okhttp3.Dispatcher
 
+
 class UserViewModel(application: Application): AndroidViewModel(application) {
     val readData: LiveData<User>
     private val repository: UserRepository
@@ -23,6 +24,12 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
     fun addUser(user: User){
         viewModelScope.launch(Dispatchers.IO){
             repository.addUser(user)
+        }
+    }
+
+    fun updateUser(user: User){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.updateUser(user)
         }
     }
 }

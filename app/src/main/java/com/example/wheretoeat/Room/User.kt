@@ -1,5 +1,6 @@
 package com.example.wheretoeat.Room
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
